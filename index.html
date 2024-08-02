@@ -14,6 +14,7 @@
             margin: 0;
             padding: 0;
             color: #001F3F; /* Dark Blue */
+            font-size: 16px; /* Base font size */
         }
 
             body::before {
@@ -43,6 +44,8 @@
         h1, h2, h3 {
             text-align: center;
             color: #1E3A8A; /* Santorini Blue */
+            font-family: 'Montserrat', sans-serif; /* Ensure headers use the same font family */
+            margin: 0.5em 0; /* Add margin for better spacing */
         }
 
         .welcome {
@@ -56,11 +59,10 @@
                 padding: 30px;
                 margin: 30px 0;
                 font-size: 1.1em;
-/*                color: #1E3A8A;
-*/                /*line-height: 1.3;*/
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 border-radius: 10px;
             }
+
                 .welcome blockquote p {
                     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
                     font-size: 1.2em;
@@ -94,6 +96,7 @@
             background: #f9f9f9;
             margin-bottom: 10px;
             border-radius: 5px;
+            font-size: 1em; /* Ensure consistency */
         }
 
         .itinerary-text {
@@ -112,7 +115,7 @@
             background: #f9f9f9;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             color: #333;
-            font-size: 1em;
+            font-size: 1em; /* Ensure consistency */
             font-family: 'Georgia', serif;
         }
 
@@ -123,6 +126,7 @@
             .checklist ul {
                 list-style-type: none;
                 padding: 0;
+                font-size: 1em; /* Ensure consistency */
             }
 
             .checklist li {
@@ -186,6 +190,7 @@
             display: flex;
             align-items: center;
             padding: 10px;
+            font-size: 1em; /* Ensure consistency */
         }
 
             .nav-link i {
@@ -228,6 +233,10 @@
             .nav-menu.show .home-link {
                 display: block;
             }
+
+            .logo {
+                margin-top: 20px; /* Add top margin for mobile devices */
+            }
         }
 
         .back-to-top {
@@ -267,12 +276,6 @@
                 color: #FF6347; /* Tomato color for location pins */
                 margin-right: 10px;
             }
-
-        @media (max-width: 768px) { /* Highlighted Change */
-            .logo {
-                margin-top: 20px; /* Highlighted Change */
-            }
-        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -353,7 +356,7 @@
                     <strong>Evening - Dinner Party</strong><br><br>
                     6:00 PM - Pickup to Argo<br>
                     7:00 PM - Welcome Drinks<br><br>
-                    <strong>Dress Code:</strong><br>Women: Stylish & elegant.<br /> Men: dapper and spruce.<br><br>
+                    <strong>Dress Code:</strong><br>Women: Stylish & legant.<br /> Men: Dapper and Spruce.<br><br>
                     <strong>Note:</strong> Cobblestone pathways. Avoid stilettos for safety.<br><br>
                     <i class="fas fa-map-marker-alt"></i> Location: <a href="https://www.google.com/maps/place/Argo+Restaurant+Village/@36.426521,25.435423,11z/data=!4m6!3m5!1s0x1499cdd2010f940f:0xd94262816069ec77!8m2!3d36.426521!4d25.4354233!16s%2Fg%2F11b6c9fy5z?hl=en&entry=ttu" target="_blank">Argo Restaurant Village, Santorini</a>
                 </div>
