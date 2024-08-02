@@ -64,8 +64,7 @@
             }
 
                 .welcome blockquote p {
-                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-                    font-size: 1.2em;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif font-size: 1.2em;
                     color: #333;
                     line-height: 1.3;
                 }
@@ -138,7 +137,32 @@
             }
 
                 .checklist li::before {
-                    content: "\2713"; /* Unicode for a checkmark */
+                    content: "\2714"; /* Unicode for a checkmark */
+                    color: #1E3A8A; /* Santorini Blue */
+                    margin-right: 10px;
+                    font-weight: bold;
+                }
+
+        .things-to-do {
+            margin-top: 20px;
+        }
+
+            .things-to-do ul {
+                list-style-type: none;
+                padding: 0;
+                font-size: 1em; /* Ensure consistency */
+            }
+
+            .things-to-do li {
+                margin: 5px 0;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                font-size: 1em; /* Inherit from .things-to-do ul */
+            }
+
+                .things-to-do li::before {
+                    content: "\2605"; /* Unicode for a star */
                     color: #1E3A8A; /* Santorini Blue */
                     margin-right: 10px;
                     font-weight: bold;
@@ -410,9 +434,9 @@
         <div id="things-to-do" class="things-to-do">
             <h2>Other Things To Do</h2>
             <ul>
-                <li>Bus tour around Fira - <a href="https://www.blueshadesofsantorini.com" target="_blank">Details</a></li>
-                <li>Flying dress photoshoot in Imerovigli (Cost: €160) - Transport arranged. Pickup at 8:15 AM.</li>
-                <li>Beach hangout at <a href="https://wetstoriessantorini.gr/" target="_blank">Wet Stories, Fira</a></li>
+                <li>🚌 Bus tour around Fira - <a href="https://www.blueshadesofsantorini.com" target="_blank">Details</a></li>
+                <li>📷 Flying dress photoshoot in Imerovigli (Cost: €160) - Transport arranged. Pickup at 8:15 AM.</li>
+                <li>🏖 Beach hangout at <a href="https://wetstoriessantorini.gr/" target="_blank">Wet Stories, Fira</a></li>
             </ul>
         </div>
 
