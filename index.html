@@ -23,7 +23,8 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: url('https://raw.githubusercontent.com/david-osho/delchi/main/images/santorini2.jpg'); background-repeat: no-repeat;
+                background-image: url('https://raw.githubusercontent.com/david-osho/delchi/main/images/santorini2.jpg');
+                background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
                 opacity: 0.5;
@@ -44,17 +45,12 @@
             color: #1E3A8A; /* Santorini Blue */
         }
 
-        h4 {
-            color: #001F3F;
-            margin-top: 20px;
-        }
-
-        .welcome, .contact {
+        .welcome {
             text-align: center;
             margin-top: 20px;
         }
 
-            .welcome blockquote, .contact blockquote {
+            .welcome blockquote {
                 background: #E0E7FF;
                 border-left: 5px solid #1E3A8A;
                 padding: 10px 20px;
@@ -84,6 +80,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            background: #f9f9f9;
+            margin-bottom: 10px;
+            border-radius: 5px;
         }
 
         .itinerary-text {
@@ -97,8 +96,7 @@
         .itinerary-description {
             display: none;
             padding: 15px;
-            margin: 5px 10px;
-            border: 1px solid #1E3A8A;
+            margin: 5px 0;
             border-radius: 5px;
             background: #f9f9f9;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -117,11 +115,18 @@
             }
 
             .checklist li {
-                background: #E0E7FF;
                 margin: 5px 0;
                 padding: 10px;
-                border-radius: 5px;
+                display: flex;
+                align-items: center;
             }
+
+                .checklist li::before {
+                    content: "\2713"; /* Unicode for a checkmark */
+                    color: #1E3A8A; /* Santorini Blue */
+                    margin-right: 10px;
+                    font-weight: bold;
+                }
 
         .map-image {
             width: 100%;
@@ -290,74 +295,89 @@
 
         <div id="itinerary" class="itinerary">
             <h2>Event Itinerary</h2>
-            <div class="itinerary-day">Thursday 5th September 2024</div>
+            <div class="itinerary-day">Thursday, 5th September 2024</div>
             <div class="itinerary-item">
                 <div class="itinerary-text">
-                    From 8pm - Welcome drinks and hangout at Casablanca
-                    <br><strong>Dress code:</strong> African fusion. No boubous. Sensible shoes due to cobblestoned pathways and walking up hills.
+                    <strong>8:00 PM - Welcome Drinks and Hangout</strong><br>
+                    Location: Casablanca<br>
+                    <strong>Dress Code:</strong> African fusion. No boubous. Wear sensible shoes for cobblestoned pathways and hills.
                 </div>
                 <div class="itinerary-description">
                     <img src="https://example.com/map.jpg" alt="Aerial Map" class="map-image">
                 </div>
             </div>
 
-            <div class="itinerary-day">Friday 6th September 2024</div>
+            <div class="itinerary-day">Friday, 6th September 2024</div>
             <div class="itinerary-item">
                 <div class="itinerary-text">
-                    (Free time AM)
+                    <strong>Morning - Free Time Activities</strong><br>
                     <ul>
-                        <li>Bus tour around Fira - <a href="https://www.blueshadesofsantorini.com">More details</a></li>
-                        <li>Flying dress photoshoot in Imerovigli (Cost 160 euro) - Transport to be arranged to and fro with a fee. Pickup time 8.15am.</li>
-                        <li>Beach hangout at Wet Stories in Fira - <a href="https://wetstoriessantorini.gr/">More details</a></li>
+                        <li>Bus tour around Fira - <a href="https://www.blueshadesofsantorini.com">Details</a></li>
+                        <li>Flying dress photoshoot in Imerovigli (Cost: €160) - Transport arranged. Pickup at 8:15 AM.</li>
+                        <li>Beach hangout at Wet Stories in Fira - <a href="https://wetstoriessantorini.gr/">Details</a></li>
                     </ul>
                 </div>
             </div>
             <div class="itinerary-item">
                 <div class="itinerary-text">
-                    Evening (Dinner party)
-                    <br>6pm prompt - Pick up to Argo for dinner party. Welcome drinks at 7pm prompt.
-                    <br><strong>Dress code:</strong> Stylish & elegant for women, Dapper and Spruce for men.
-                    <br><strong>Warning:</strong> Party area is cobblestoned. Stilettos may be a health hazard..beware.
+                    <strong>Evening - Dinner Party</strong><br>
+                    6:00 PM - Pickup to Argo<br>
+                    7:00 PM - Welcome Drinks<br>
+                    <strong>Dress Code:</strong> Stylish & elegant for women, dapper and spruce for men.<br>
+                    <strong>Note:</strong> Cobblestone pathways. Avoid stilettos for safety.
                 </div>
             </div>
 
-            <div class="itinerary-day">Saturday 7th September 2024</div>
+            <div class="itinerary-day">Saturday, 7th September 2024</div>
             <div class="itinerary-item">
                 <div class="itinerary-text">
-                    11 am - Photoshoot @ Orama hotel
-                    <br>1pm - Cruise Pickup from various hotels
-                    <br>2.30pm-8pm - Cruise
-                    <br><strong>Note:</strong> Please have a copy of your passport or ID photos on your phone. The cruise starts at 1.30pm.
+                    <strong>11:00 AM - Photoshoot</strong><br>
+                    Location: Orama Hotel
+                </div>
+            </div>
+            <div class="itinerary-item">
+                <div class="itinerary-text">
+                    <strong>1:00 PM - Cruise Pickup</strong><br>
+                    Pickup from various hotels
+                </div>
+            </div>
+            <div class="itinerary-item">
+                <div class="itinerary-text">
+                    <strong>2:30 PM - 8:00 PM - Cruise</strong><br>
+                    <strong>Note:</strong> Please have a copy of your passport or ID photos on your phone. The cruise starts at 1:30 PM.
                 </div>
                 <div class="itinerary-description">
-                    Places to Visit: HOT SPRINGS, RED BEACH, WHITE BEACH (mesa pigadia caves)
-                    <br>Sails Past: ASPRONISI, LIGHTHOUSE, BLACK MOUNTAIN, INDIAN FACE ROCK
-                    <br><strong>Inclusions:</strong> Round trip transfer, snorkeling equipment, blankets
-                    <br><strong>Exclusions:</strong> Beers, towels.
-                    <br>Optional hangout after cruise at venue to be confirmed.
-                    <br><strong>Dress code:</strong> Deck casual. Colors - Blue/White.
+                    <strong>Places to Visit:</strong> Hot Springs, Red Beach, White Beach (Mesa Pigadia Caves)<br>
+                    <strong>Sails Past:</strong> Aspronisi, Lighthouse, Black Mountain, Indian Face Rock<br>
+                    <strong>Inclusions:</strong> Round trip transfer, snorkeling equipment, blankets<br>
+                    <strong>Exclusions:</strong> Beers, towels.<br>
+                    Optional hangout after the cruise at a venue to be confirmed.<br>
+                    <strong>Dress Code:</strong> Deck casual. Colors - Blue/White.
                 </div>
             </div>
 
-            <div class="itinerary-day">Sunday 8th September 2024</div>
+            <div class="itinerary-day">Sunday, 8th September 2024</div>
             <div class="itinerary-item">
-                <div class="itinerary-text">Goodbyes</div>
+                <div class="itinerary-text">
+                    <strong>Goodbyes</strong><br>
+                    Check-out and departure.
+                </div>
             </div>
         </div>
 
         <div id="essentials" class="checklist">
             <h2>Essentials to Remember</h2>
             <ul>
-                <li>✈️ Book those flights! (Double-check those dates, okay?)</li>
-                <li>🏨 Confirm your hotel reservation. No surprises!</li>
-                <li>🚖 Book taxi for hotel transfers via bookings.com etc.</li>
-                <li>Travel essentials: passport, visa (if needed), travel insurance.</li>
-                <li>Beachwear for soaking up the sun</li>
-                <li>Comfortable shoes for exploring as the walkways are made of cobbled stone so please put safety first.</li>
-                <li>Sun protection to keep you safe</li>
-                <li>Hayfever tablets if needed</li>
-                <li>A light jacket for cooler evenings</li>
-                <li>A power adapter for Greece (Type C, Type E, or Type F)</li>
+                <li>✈️ Book your flights! Double-check the dates.</li>
+                <li>🏨 Confirm your hotel reservation to avoid surprises.</li>
+                <li>🚖 Arrange taxi for hotel transfers via bookings.com or similar.</li>
+                <li>🛂 Ensure you have your passport, visa (if needed), and travel insurance.</li>
+                <li>👙 Pack beachwear for soaking up the sun.</li>
+                <li>👟 Bring comfortable shoes for exploring cobblestone paths.</li>
+                <li>☀️ Use sun protection to stay safe.</li>
+                <li>💊 Carry hayfever tablets if needed.</li>
+                <li>🧥 Pack a light jacket for cooler evenings.</li>
+                <li>🔌 Bring a power adapter for Greece (Type C, Type E, or Type F).</li>
             </ul>
         </div>
     </div>
