@@ -245,6 +245,17 @@
                 max-width: 150px;
                 margin-right: 20px;
             }
+
+        .location-pin {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+            .location-pin i {
+                color: #FF6347; /* Tomato color for location pins */
+                margin-right: 10px;
+            }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -274,6 +285,7 @@
         <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         <ul class="nav-menu">
             <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#things-to-do" class="nav-link">Things to Do</a></li>
             <li><a href="#itinerary" class="nav-link">Itinerary</a></li>
             <li><a href="#essentials" class="nav-link">Essentials</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -293,17 +305,24 @@
             </blockquote>
         </div>
 
+        <div id="things-to-do" class="things-to-do">
+            <h2>Things to Do</h2>
+            <ul>
+                <li>Bus tour around Fira - <a href="https://www.blueshadesofsantorini.com" target="_blank">Details</a></li>
+                <li>Flying dress photoshoot in Imerovigli (Cost: €160) - Transport arranged. Pickup at 8:15 AM.</li>
+                <li>Beach hangout at <a href="https://wetstoriessantorini.gr/" target="_blank">Wet Stories, Fira</a></li>
+            </ul>
+        </div>
+
         <div id="itinerary" class="itinerary">
             <h2>Event Itinerary</h2>
+
             <div class="itinerary-day">Thursday, 5th September 2024</div>
             <div class="itinerary-item">
                 <div class="itinerary-text">
-                    <strong>8:00 PM - Welcome Drinks and Hangout</strong><br>
-                    Location: Casablanca<br>
-                    <strong>Dress Code:</strong> African fusion. No boubous. Wear sensible shoes for cobblestoned pathways and hills.
-                </div>
-                <div class="itinerary-description">
-                    <img src="https://example.com/map.jpg" alt="Aerial Map" class="map-image">
+                    <strong>8:00 PM - Welcome Drinks and Hangout</strong><br><br>
+                    <strong>Dress Code:</strong> African fusion. No boubous. Wear sensible shoes for cobblestoned pathways and hills.<br><br>
+                    <i class="fas fa-map-marker-alt"></i> Location: <a href="https://www.google.com/maps/dir//Downtown,+Ipapantis+12,+Thira+847+00,+Greece/@36.4185381,25.3491058,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1499cdd2268109cb:0x7234a1fb0daf4f8d!2m2!1d25.4315069!2d36.4185664?entry=ttu" target="_blank">Casablanca, Ipapantis 12, Thira 847 00, Greece</a>
                 </div>
             </div>
 
@@ -312,54 +331,63 @@
                 <div class="itinerary-text">
                     <strong>Morning - Free Time Activities</strong><br>
                     <ul>
-                        <li>Bus tour around Fira - <a href="https://www.blueshadesofsantorini.com">Details</a></li>
+                        <li>Bus tour around Fira - <a href="https://www.blueshadesofsantorini.com" target="_blank">Details</a></li>
                         <li>Flying dress photoshoot in Imerovigli (Cost: €160) - Transport arranged. Pickup at 8:15 AM.</li>
-                        <li>Beach hangout at Wet Stories in Fira - <a href="https://wetstoriessantorini.gr/">Details</a></li>
+                        <li>Beach hangout at <a href="https://wetstoriessantorini.gr/" target="_blank">Wet Stories, Fira</a></li>
                     </ul>
+                    <i class="fas fa-map-marker-alt"></i> Location: <a href="https://www.google.com/maps/place/Wet+Stories/@36.345413,25.464142,16z/data=!4m6!3m5!1s0x14a1a4aaceb4d2cf:0x7112577b66b39a95!8m2!3d36.3454132!4d25.4641422!16s%2Fg%2F11b5ph_qrj?hl=en&entry=ttu" target="_blank"> WET STORIES Perivolos   Thíra, Kikladhes, Santorini</a>
                 </div>
             </div>
             <div class="itinerary-item">
                 <div class="itinerary-text">
-                    <strong>Evening - Dinner Party</strong><br>
+                    <strong>Evening - Dinner Party</strong><br><br>
                     6:00 PM - Pickup to Argo<br>
-                    7:00 PM - Welcome Drinks<br>
-                    <strong>Dress Code:</strong> Stylish & elegant for women, dapper and spruce for men.<br>
-                    <strong>Note:</strong> Cobblestone pathways. Avoid stilettos for safety.
+                    7:00 PM - Welcome Drinks<br><br>
+                    <strong>Dress Code:</strong> Stylish & elegant for women, dapper and spruce for men.<br><br>
+                    <strong>Note:</strong> Cobblestone pathways. Avoid stilettos for safety.<br><br>
+                    <i class="fas fa-map-marker-alt"></i> Location: <a href="https://www.google.com/maps/place/Argo+Restaurant+Village/@36.426521,25.435423,11z/data=!4m6!3m5!1s0x1499cdd2010f940f:0xd94262816069ec77!8m2!3d36.426521!4d25.4354233!16s%2Fg%2F11b6c9fy5z?hl=en&entry=ttu" target="_blank">Argo Restaurant Village, Santorini</a>
                 </div>
             </div>
 
             <div class="itinerary-day">Saturday, 7th September 2024</div>
             <div class="itinerary-item">
                 <div class="itinerary-text">
-                    <strong>11:00 AM - Photoshoot</strong><br>
-                    Location: Orama Hotel
+                    <strong>11:00 AM - Photoshoot</strong><br><br>
+                    <i class="fas fa-map-marker-alt"></i> Location: <a href="https://www.google.com/maps/place/Orama+Hotel/@39.3229627,21.7043545,17z/data=!3m1!4b1!4m9!3m8!1s0x13592fb2439eeabd:0xe98aa6b0651a7028!5m2!4m1!1i2!8m2!3d39.3229627!4d21.7043545!16s%2Fg%2F1td6vdhs?entry=ttu" target="_blank">Orama Hotel & Spa, Santorini</a>
                 </div>
             </div>
             <div class="itinerary-item">
                 <div class="itinerary-text">
-                    <strong>1:00 PM - Cruise Pickup</strong><br>
-                    Pickup from various hotels
-                </div>
-            </div>
-            <div class="itinerary-item">
-                <div class="itinerary-text">
-                    <strong>2:30 PM - 8:00 PM - Cruise</strong><br>
-                    <strong>Note:</strong> Please have a copy of your passport or ID photos on your phone. The cruise starts at 1:30 PM.
-                </div>
-                <div class="itinerary-description">
-                    <strong>Places to Visit:</strong> Hot Springs, Red Beach, White Beach (Mesa Pigadia Caves)<br>
-                    <strong>Sails Past:</strong> Aspronisi, Lighthouse, Black Mountain, Indian Face Rock<br>
-                    <strong>Inclusions:</strong> Round trip transfer, snorkeling equipment, blankets<br>
-                    <strong>Exclusions:</strong> Beers, towels.<br>
-                    Optional hangout after the cruise at a venue to be confirmed.<br>
+                    <strong>1:00 PM - Cruise Pickup</strong><br><br>
+                    Pickup from various hotels<br><br />
                     <strong>Dress Code:</strong> Deck casual. Colors - Blue/White.
+
+                </div>
+            </div>
+            <div class="itinerary-item">
+                <div class="itinerary-text">
+                    <strong>2:30 PM - 8:00 PM - Cruise</strong><br><br>
+                    <strong>Note:</strong> Please have a copy of your passport or ID photos on your phone. The cruise starts at 1:30 PM.
+                    <br> <br><strong>
+                        Places to Visit:
+                    </strong>
+                    <ul>
+                        <li>
+                            Hot Springs, Red Beach, White Beach (Mesa Pigadia Caves)
+                        </li>
+                        <li>Sails Past: Aspronisi, Lighthouse, Black Mountain, Indian Face Rock<br></li>
+                    </ul>
+                    <strong>Inclusions: </strong> Round trip transfer, snorkeling equipment, blankets<br>
+                    <strong>Exclusions: </strong> Beers, towels.<br><br />
+                    Optional hangout after the cruise at a venue to be confirmed.<br><br />
+
                 </div>
             </div>
 
             <div class="itinerary-day">Sunday, 8th September 2024</div>
             <div class="itinerary-item">
                 <div class="itinerary-text">
-                    <strong>Goodbyes</strong><br>
+                    <strong>Goodbyes</strong><br><br>
                     Check-out and departure.
                 </div>
             </div>
