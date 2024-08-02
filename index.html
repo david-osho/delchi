@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DELCHI 50/20 - Santorini Event</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            color: #1E3A8A; /* Santorini Blue */
-            background-color: #F3F4F6; /* Light background for readability */
+            font-family: 'Montserrat', sans-serif;
+            background: #f4f4f9;
             margin: 0;
             padding: 0;
+            color: #001F3F; /* Dark Blue */
         }
 
             body::before {
@@ -20,8 +23,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: url('https://raw.githubusercontent.com/david-osho/delchi/main/images/santorini2.jpeg');
-                background-repeat: no-repeat;
+                background-image: url('https://raw.githubusercontent.com/david-osho/delchi/main/images/santorini2.jpg'); background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
                 opacity: 0.5;
@@ -29,30 +31,81 @@
             }
 
         .container {
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            margin: 80px auto;
+            border-radius: 15px;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .welcome-message {
+        h1, h2, h3 {
             text-align: center;
-            margin-bottom: 20px;
+            color: #1E3A8A; /* Santorini Blue */
         }
 
-        .event-section {
-            margin-bottom: 20px;
+        h4 {
+            color: #001F3F;
+            margin-top: 20px;
         }
 
-            .event-section h2 {
-                border-bottom: 2px solid #1E3A8A;
-                padding-bottom: 5px;
+        .welcome, .contact {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .welcome blockquote, .contact blockquote {
+                background: #E0E7FF;
+                border-left: 5px solid #1E3A8A;
+                padding: 10px 20px;
+                margin: 20px 0;
             }
 
         .itinerary {
-            margin-bottom: 20px;
+            margin: 40px 0;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 10px;
         }
 
-            .itinerary h3 {
-                color: #1E3A8A;
-            }
+        .itinerary-day {
+            background: #1E3A8A;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .itinerary-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .itinerary-text {
+            flex-grow: 1;
+        }
+
+        .itinerary-item:hover {
+            background: #e0e0e0;
+        }
+
+        .itinerary-description {
+            display: none;
+            padding: 15px;
+            margin: 5px 10px;
+            border: 1px solid #1E3A8A;
+            border-radius: 5px;
+            background: #f9f9f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #333;
+            font-size: 1em;
+            font-family: 'Georgia', serif;
+        }
 
         .checklist {
             margin-top: 20px;
@@ -73,64 +126,226 @@
         .map-image {
             width: 100%;
             max-width: 600px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        .navbar {
+            background-color: #1E3A8A;
+            padding: 10px;
+            border-bottom: 2px solid white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+            .nav-link i {
+                margin-right: 5px;
+            }
+
+            .nav-link:hover {
+                border-bottom: 2px solid white;
+            }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+                .nav-menu.show {
+                    display: flex;
+                }
+
+            .nav-link {
+                justify-content: center;
+                padding: 15px 0;
+            }
+
+            .home-link {
+                display: none;
+            }
+
+            .nav-menu.show .home-link {
+                display: block;
+            }
+        }
+
+        .back-to-top {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .back-to-top a {
+                color: #1E3A8A;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+                .back-to-top a:hover {
+                    text-decoration: underline;
+                }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .logo img {
+                max-width: 150px;
+                margin-right: 20px;
+            }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var items = document.querySelectorAll('.itinerary-day');
+            items.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    var nextElement = this.nextElementSibling;
+                    while (nextElement && nextElement.classList.contains('itinerary-item')) {
+                        var description = nextElement.querySelector('.itinerary-description');
+                        description.style.display = description.style.display === 'none' ? 'block' : 'none';
+                        nextElement = nextElement.nextElementSibling;
+                    }
+                });
+            });
+
+            var menuToggle = document.querySelector('.menu-toggle');
+            var navMenu = document.querySelector('.nav-menu');
+
+            menuToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('show');
+            });
+        });
+    </script>
 </head>
 <body>
+    <div class="navbar">
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        <ul class="nav-menu">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#itinerary" class="nav-link">Itinerary</a></li>
+            <li><a href="#essentials" class="nav-link">Essentials</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
     <div class="container">
-        <div class="welcome-message">
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/david-osho/delchi/main/images/delchi5020.jpg" alt="DELCHI Logo">
             <h1>Welcome to DELCHI 50/20 - Santorini</h1>
-            <p>Imagine…. basking in the resplendent sunset evenings amidst the enchanting white-washed walls and dreamy blue domes of Santorini where each corner whispers a tale of romance…. Well, we welcome you to Santorini!!!!</p>
-            <p>The jewel of the Aegean Sea, where the sunsets transform the sky into a canvas of vibrant hues and every corner whispers a tale of wonder.</p>
-            <p>Santorini promises an idyllic blend of relaxation, adventure, and cultural immersion. If you get the chance try to catch a glimpse of the sun setting on the Caldera. Trust me it will be worth it.</p>
-            <p>Prepare to be swept away by the island's spirit as you settle into your luxurious accommodations and be immersed in the excitement of the weekend ahead.</p>
+        </div>
+        <div class="welcome">
+            <blockquote>
+                Imagine… basking in the resplendent sunset evenings amidst the enchanting white-washed walls and dreamy blue domes of Santorini where each corner whispers a tale of romance…. Well, we welcome you to Santorini!!!!
+                <br>The jewel of the Aegean Sea, where the sunsets transform the sky into a canvas of vibrant hues and every corner whispers a tale of wonder.
+                <br>Santorini promises an idyllic blend of relaxation, adventure, and cultural immersion. If you get the chance try to catch a glimpse of the sun setting on the Caldera. Trust me it will be worth it.
+                <br>Prepare to be swept away by the island's spirit as you settle into your luxurious accommodations and be immersed in the excitement of the weekend ahead.
+            </blockquote>
         </div>
 
-        <div class="event-section">
+        <div id="itinerary" class="itinerary">
             <h2>Event Itinerary</h2>
-
-            <div class="itinerary">
-                <h3>Thursday 5th September 2024</h3>
-                <p>From 8pm - Welcome drinks and hangout at Casablanca</p>
-                <p><strong>Dress code:</strong> African fusion. No boubous. Sensible shoes due to cobblestoned pathways and walking up hills.</p>
-                <img src="https://example.com/map.jpg" alt="Aerial Map" class="map-image">
+            <div class="itinerary-day">Thursday 5th September 2024</div>
+            <div class="itinerary-item">
+                <div class="itinerary-text">
+                    From 8pm - Welcome drinks and hangout at Casablanca
+                    <br><strong>Dress code:</strong> African fusion. No boubous. Sensible shoes due to cobblestoned pathways and walking up hills.
+                </div>
+                <div class="itinerary-description">
+                    <img src="https://example.com/map.jpg" alt="Aerial Map" class="map-image">
+                </div>
             </div>
 
-            <div class="itinerary">
-                <h3>Friday 6th September 2024</h3>
-                <p>(Free time AM)</p>
-                <ul>
-                    <li>Bus tour around Fira - <a href="https://www.blueshadesofsantorini.com">More details</a></li>
-                    <li>Flying dress photoshoot in Imerovigli (Cost 160 euro) - Transport to be arranged to and fro with a fee. Pickup time 8.15am.</li>
-                    <li>Beach hangout at Wet Stories in Fira - <a href="https://wetstoriessantorini.gr/">More details</a></li>
-                </ul>
-                <p>Evening (Dinner party)</p>
-                <p>6pm prompt - Pick up to Argo for dinner party. Welcome drinks at 7pm prompt.</p>
-                <p><strong>Dress code:</strong> Stylish & elegant for women, Dapper and Spruce for men.</p>
-                <p><strong>Warning:</strong> Party area is cobblestoned. Stilettos may be a health hazard..beware.</p>
+            <div class="itinerary-day">Friday 6th September 2024</div>
+            <div class="itinerary-item">
+                <div class="itinerary-text">
+                    (Free time AM)
+                    <ul>
+                        <li>Bus tour around Fira - <a href="https://www.blueshadesofsantorini.com">More details</a></li>
+                        <li>Flying dress photoshoot in Imerovigli (Cost 160 euro) - Transport to be arranged to and fro with a fee. Pickup time 8.15am.</li>
+                        <li>Beach hangout at Wet Stories in Fira - <a href="https://wetstoriessantorini.gr/">More details</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="itinerary-item">
+                <div class="itinerary-text">
+                    Evening (Dinner party)
+                    <br>6pm prompt - Pick up to Argo for dinner party. Welcome drinks at 7pm prompt.
+                    <br><strong>Dress code:</strong> Stylish & elegant for women, Dapper and Spruce for men.
+                    <br><strong>Warning:</strong> Party area is cobblestoned. Stilettos may be a health hazard..beware.
+                </div>
             </div>
 
-            <div class="itinerary">
-                <h3>Saturday 7th September 2024</h3>
-                <p>11 am - Photoshoot @ Orama hotel</p>
-                <p>1pm - Cruise Pickup from various hotels</p>
-                <p>2.30pm-8pm - Cruise</p>
-                <p><strong>Note:</strong> Please have a copy of your passport or ID photos on your phone. The cruise starts at 1.30pm.</p>
-                <p>Places to Visit: HOT SPRINGS, RED BEACH, WHITE BEACH (mesa pigadia caves)</p>
-                <p>Sails Past: ASPRONISI, LIGHTHOUSE, BLACK MOUNTAIN, INDIAN FACE ROCK</p>
-                <p><strong>Inclusions:</strong> Round trip transfer, snorkeling equipment, blankets</p>
-                <p><strong>Exclusions:</strong> Beers, towels.</p>
-                <p>Optional hangout after cruise at venue to be confirmed.</p>
-                <p><strong>Dress code:</strong> Deck casual. Colors - Blue/White.</p>
+            <div class="itinerary-day">Saturday 7th September 2024</div>
+            <div class="itinerary-item">
+                <div class="itinerary-text">
+                    11 am - Photoshoot @ Orama hotel
+                    <br>1pm - Cruise Pickup from various hotels
+                    <br>2.30pm-8pm - Cruise
+                    <br><strong>Note:</strong> Please have a copy of your passport or ID photos on your phone. The cruise starts at 1.30pm.
+                </div>
+                <div class="itinerary-description">
+                    Places to Visit: HOT SPRINGS, RED BEACH, WHITE BEACH (mesa pigadia caves)
+                    <br>Sails Past: ASPRONISI, LIGHTHOUSE, BLACK MOUNTAIN, INDIAN FACE ROCK
+                    <br><strong>Inclusions:</strong> Round trip transfer, snorkeling equipment, blankets
+                    <br><strong>Exclusions:</strong> Beers, towels.
+                    <br>Optional hangout after cruise at venue to be confirmed.
+                    <br><strong>Dress code:</strong> Deck casual. Colors - Blue/White.
+                </div>
             </div>
 
-            <div class="itinerary">
-                <h3>Sunday 8th September 2024</h3>
-                <p>Goodbyes</p>
+            <div class="itinerary-day">Sunday 8th September 2024</div>
+            <div class="itinerary-item">
+                <div class="itinerary-text">Goodbyes</div>
             </div>
         </div>
 
-        <div class="checklist">
+        <div id="essentials" class="checklist">
             <h2>Essentials to Remember</h2>
             <ul>
                 <li>✈️ Book those flights! (Double-check those dates, okay?)</li>
@@ -145,6 +360,10 @@
                 <li>A power adapter for Greece (Type C, Type E, or Type F)</li>
             </ul>
         </div>
+    </div>
+
+    <div class="back-to-top">
+        <a href="#">Back to top</a>
     </div>
 </body>
 </html>
