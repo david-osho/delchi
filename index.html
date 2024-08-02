@@ -256,6 +256,12 @@
                 color: #FF6347; /* Tomato color for location pins */
                 margin-right: 10px;
             }
+
+        @media (max-width: 768px) { /* Highlighted Change */
+            .logo {
+                margin-top: 20px; /* Highlighted Change */
+            }
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -285,8 +291,8 @@
         <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         <ul class="nav-menu">
             <li><a href="#" class="nav-link">Home</a></li>
-            <li><a href="#things-to-do" class="nav-link">Things to Do</a></li>
             <li><a href="#itinerary" class="nav-link">Itinerary</a></li>
+            <li><a href="#things-to-do" class="nav-link">Things to Do</a></li>
             <li><a href="#essentials" class="nav-link">Essentials</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -294,7 +300,6 @@
     <div class="container">
         <div class="logo">
             <img src="https://raw.githubusercontent.com/david-osho/delchi/main/images/delchi5020.jpg" alt="DELCHI Logo">
-            <!--<h1>Welcome to DELCHI 50/20 - Santorini</h1>-->
         </div>
         <div class="welcome">
             <blockquote>
@@ -387,7 +392,7 @@
         </div>
 
         <div id="things-to-do" class="things-to-do">
-            <h2>Things to Do</h2>
+            <h2>Other Things To Do</h2>
             <ul>
                 <li>Bus tour around Fira - <a href="https://www.blueshadesofsantorini.com" target="_blank">Details</a></li>
                 <li>Flying dress photoshoot in Imerovigli (Cost: €160) - Transport arranged. Pickup at 8:15 AM.</li>
