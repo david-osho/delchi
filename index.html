@@ -328,27 +328,30 @@
                 });
             });
 
-            var menuToggle = document.querySelector('.menu-toggle');
-            var navMenu = document.querySelector('.nav-menu');
+            document.querySelector('.menu-toggle').addEventListener('click', function () {
+                document.querySelector('.nav-menu').classList.toggle('show');
+            });
 
-            menuToggle.addEventListener('click', function () {
-                navMenu.classList.toggle('show');
-            });
-        });
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function (event) {
-                const targetId = this.getAttribute('href');
-                if (targetId.startsWith('#')) {
-                    event.preventDefault();
-                    if (targetId === '#') {
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                    } else {
-                        document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function (event) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId.startsWith('#')) {
+                        event.preventDefault();
+                        if (targetId === '#') {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        } else {
+                            document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+                        }
+                        document.querySelector('.nav-menu').classList.remove('show');
                     }
-                    document.querySelector('.nav-menu').classList.remove('show');
-                }
+                });
+            });
+
+            document.querySelector('.home-link').addEventListener('click', function () {
+                document.querySelector('.nav-menu').classList.remove('show');
             });
         });
+
         document.querySelector('.home-link').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.remove('show');
         });
@@ -369,7 +372,7 @@
             <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
     </div>
-    <div id="welcome"  class="container">
+    <div id="welcome" class="container">
         <div class="logo">
             <img src="https://raw.githubusercontent.com/david-osho/delchi/main/images/delchi5020.png" alt="DELCHI Logo">
         </div>
