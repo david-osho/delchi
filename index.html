@@ -13,8 +13,8 @@
             background: #f4f4f9;
             margin: 0;
             padding: 0;
-            color: #001F3F; /* Dark Blue */
-            font-size: 16px; /* Base font size */
+            color: #001F3F;
+            font-size: 16px;
         }
 
             body::before {
@@ -42,11 +42,30 @@
         }
 
         h1, h2, h3 {
+            font-family: 'Roboto Slab', serif;
             text-align: center;
-            color: #1E3A8A; /* Santorini Blue */
-            font-family: 'Montserrat', sans-serif; /* Ensure headers use the same font family */
-            margin: 0.5em 0; /* Add margin for better spacing */
+            color: #1E3A8A;
+            margin: 0.5em 0;
         }
+
+        .countdown {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+            background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            .countdown span {
+                font-weight: bold;
+                font-size: 1.5em;
+                margin: 0 5px;
+            }
+
+        /* Rest of your existing styles */
 
         .welcome {
             text-align: center;
@@ -64,7 +83,8 @@
             }
 
                 .welcome blockquote p {
-                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif font-size: 1.2em;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-size: 1.2em;
                     color: #333;
                     line-height: 1.3;
                 }
@@ -103,7 +123,7 @@
         }
 
         .itinerary-item:hover {
-            background: rgba(224, 224, 224, 0.2)!important;
+            background: rgba(224, 224, 224, 0.2) !important;
         }
 
         .itinerary-description {
@@ -111,7 +131,7 @@
             padding: 15px;
             margin: 5px 0;
             border-radius: 5px;
-            background: rgba(249, 249, 249, 0.3)!important;
+            background: rgba(249, 249, 249, 0.3) !important;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             color: #333;
             font-size: 1em; /* Ensure consistency */
@@ -315,6 +335,25 @@
             }
     </style>
     <script>
+        function updateCountdown() {
+            const eventDate = new Date("2024-09-05T00:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+
         document.addEventListener('DOMContentLoaded', function () {
             var items = document.querySelectorAll('.itinerary-day');
             items.forEach(function (item) {
@@ -376,12 +415,15 @@
         <div class="logo">
             <img src="https://raw.githubusercontent.com/david-osho/delchi/main/images/delchi5020.png" alt="DELCHI Logo">
         </div>
+        <div class="countdown" id="countdown">
+          <span id="days"></span> days <span id="hours"></span> hours <span id="minutes"></span> minutes <span id="seconds"></span> seconds umtil Event!
+        </div>
         <div class="welcome">
             <blockquote>
-                   <p>Welcome Everyone!</p>
-        <p>We trust you are all well.</p>
-        <p>We are very excited that you will be joining us to celebrate our landmark birthdays and our 20th wedding anniversary in the beautiful island of Santorini 🏝️.</p>
-        <p>We have chosen this amazing Island to celebrate with you and look forward to having a great time with you all 🎉.</p>
+                <p>Welcome Everyone!</p>
+                <p>We trust you are all well.</p>
+                <p>We are very excited that you will be joining us to celebrate our landmark birthdays and our 20th wedding anniversary in the beautiful island of Santorini 🏝️.</p>
+                <p>We have chosen this amazing Island to celebrate with you and look forward to having a great time with you all 🎉.</p>
                 <p><strong>With love,<br>Delu & Chima Oti</strong></p>
             </blockquote>
         </div>
