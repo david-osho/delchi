@@ -15,6 +15,7 @@
             padding: 0;
             color: #001F3F;
             font-size: 16px;
+            opacity:0;
         }
 
             body::before {
@@ -328,12 +329,12 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
-            animation: logoAnimation 2s ease-in-out;
         }
 
             .logo img {
                 max-width: 150px;
                 margin-right: 20px;
+                animation: logoAnimation 2s ease-in-out;
             }
 
         @keyframes logoAnimation {
@@ -375,6 +376,11 @@
             document.getElementById("minutes").textContent = minutes;
             document.getElementById("seconds").textContent = seconds;
         }
+
+        window.addEventListener('load', function () {
+            window.scrollTo(0, 0);
+            document.body.style.opacity = 1;
+        });
 
         setInterval(updateCountdown, 1000);
         updateCountdown(); // Initial call
